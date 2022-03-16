@@ -1,0 +1,25 @@
+﻿@model HomeDetailsViewModel
+@{
+    ViewBag.title = "TV Details";
+}
+<div class="row justify-content-center m-3"style="background:#0c4ef9;">
+    <div class=" col-sm-8">
+        <div class=" card">
+            <div class=" card-header text-center  ">
+                <h1>@Model.TV.Long</h1>
+            </div>
+            <div class=" card-body text-center ">
+                <img src="~/img/1.png" alt="Alternate Text" class=" card-img-top " asp-append-version=" true "/>
+                <h4>TV ID:@Model.TV.Id</h4>
+                <h4>Name:@Model.TV.Name</h4>
+                <h4>Long:@Model.TV.Long</h4>
+            </div>
+            <div class=" card-footer text-center "style=" background:#473939;">
+                <a asp-controller="home"asp-action="index" class=" btn btn-primary">Back</a>
+                <a asp-controller="home" asp-action="update"  class=" btn btn-primary">Edit</a>
+                <a href="#" class=" btn btn-danger">Delete</a>
+            </div>
+        </div>
+    </div>
+    </div>
+    

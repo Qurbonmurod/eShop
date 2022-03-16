@@ -1,0 +1,22 @@
+﻿@model HomeIndexViewModel
+    @{ 
+        ViewBag.title = "TV List";
+    }
+<div class="card-deck">
+    @foreach (var tv in Model.TVs)
+	{
+	<div class="card m-3" style="background:#0c4ef9;">
+        <div class="card-header text-center ">
+            <h3>@tv.Long</h3>
+
+        </div>
+        <img src="~/img/1.png" alt="Alternate Text" class="card-img-top" asp-append-version=" true "/>
+        <div class=" card-footer text-center "style=" background:#473939;">
+            <a asp-controller="home" asp-action="details" asp-route-id="@tv.Id" class=" btn btn-primary m-1">View</a>
+            <a asp-controller="home" asp-action="update" asp-route-id="@tv.Id" class=" btn btn-primary m-1">Edit</a>
+            <a href="#" class=" btn btn-danger m-1">Delete</a>
+
+        </div>
+    </div>	 
+	}
+</div>

@@ -1,0 +1,13 @@
+﻿using eShop.Domain;
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Threading.Tasks;
+
+namespace eShop.ViewModel
+{
+    public class HomeIndexViewModel
+    {
+        public IEnumerable<TV> TVs{ get; set; }
+    }
+}
